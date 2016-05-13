@@ -1,0 +1,71 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mail: MyString
+  front_door: MyString
+  security_system: MyString
+  water_main: MyString
+  water_heater: MyString
+  garage_access_door: MyString
+  garage_overhead_door: MyString
+  outdoor_trash: MyString
+  indoor_trash: MyString
+  breaker_box: MyString
+  washer: MyString
+  dryer: MyString
+  smoke_detectors: MyString
+  ceiling_fans: 
+  thermostat: MyString
+  cabinets_drawers: MyString
+  refrigerator: MyString
+  freezer: MyString
+  garbage_disposal: MyString
+  dishwasher: MyString
+  faucets: MyString
+  toilets: MyString
+  doors_windows: MyString
+  ceilings_walls: MyString
+  screen_doors: MyString
+  pool: MyString
+  exterior: MyString
+  pests: MyString
+  general_cleanliness: MyString
+  carpet_cleanliness: MyString
+  window_cleanliness: MyString
+  patio_cleanliness: MyString
+  client_id: 
+
+two:
+  mail: MyString
+  front_door: MyString
+  security_system: MyString
+  water_main: MyString
+  water_heater: MyString
+  garage_access_door: MyString
+  garage_overhead_door: MyString
+  outdoor_trash: MyString
+  indoor_trash: MyString
+  breaker_box: MyString
+  washer: MyString
+  dryer: MyString
+  smoke_detectors: MyString
+  ceiling_fans: 
+  thermostat: MyString
+  cabinets_drawers: MyString
+  refrigerator: MyString
+  freezer: MyString
+  garbage_disposal: MyString
+  dishwasher: MyString
+  faucets: MyString
+  toilets: MyString
+  doors_windows: MyString
+  ceilings_walls: MyString
+  screen_doors: MyString
+  pool: MyString
+  exterior: MyString
+  pests: MyString
+  general_cleanliness: MyString
+  carpet_cleanliness: MyString
+  window_cleanliness: MyString
+  patio_cleanliness: MyString
+  client_id: 

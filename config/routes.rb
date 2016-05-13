@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :clients
-  
+  resources :clients do
+    resources :inspections
+  end
 end
