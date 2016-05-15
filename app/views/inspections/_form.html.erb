@@ -1,0 +1,134 @@
+<%= form_for [@client, @inspection] do |f| %>
+  <div class="">
+    <div class="">
+      <%= f.label :mail %>
+      <%= f.text_field :mail %>
+    </div>
+    <div class="">
+      <%= f.label :front_door %>
+      <%= f.text_field :front_door %>
+    </div>
+    <div class="">
+      <%= f.label :security_system %>
+      <%= f.text_field :security_system %>
+    </div>
+    <div class="">
+      <%= f.label :water_main %>
+      <%= f.text_field :water_main %>
+    </div>
+    <div class="">
+      <%= f.label :water_heater %>
+      <%= f.text_field :water_heater %>
+    </div>
+    <div class="">
+      <%= f.label :garage_access_door %>
+      <%= f.text_field :garage_access_door %>
+    </div>
+    <div class="">
+      <%= f.label :garage_overhead_door %>
+      <%= f.text_field :garage_overhead_door %>
+    </div>
+    <div class="">
+      <%= f.label :outdoor_trash %>
+      <%= f.text_field :outdoor_trash %>
+    </div>
+    <div class="">
+      <%= f.label :indoor_trash %>
+      <%= f.text_field :indoor_trash %>
+    </div>
+    <div class="">
+      <%= f.label :breaker_box %>
+      <%= f.text_field :breaker_box %>
+    </div>
+    <div class="">
+      <%= f.label :smoke_detectors %>
+      <%= f.text_field :smoke_detectors %>
+    </div>
+    <div class="">
+      <%= f.label :ceiling_fans %>
+      <%= f.text_field :ceiling_fans%>
+    </div>
+    <div class="">
+      <%= f.label :humidistat %>
+      <%= f.text_field :humidistat %>
+    </div>
+    <div class="">
+      <%= f.label :thermostat %>
+      <%= f.text_field :thermostat %>
+    </div>
+    <div class="">
+      <%= f.label :cabinets_drawers %>
+      <%= f.text_field :cabinets_drawers %>
+    </div>
+    <div class="">
+      <%= f.label :refrigerator %>
+      <%= f.text_field :refrigerator %>
+    </div>
+    <div class="">
+      <%= f.label :freezer %>
+      <%= f.text_field :freezer %>
+    </div>
+    <div class="">
+      <%= f.label :garbage_disposal %>
+      <%= f.text_field :garbage_disposal %>
+    </div>
+    <div class="">
+      <%= f.label :dishwasher %>
+      <%= f.text_field :dishwasher %>
+    </div>
+    <div class="">
+      <%= f.label :faucets %>
+      <%= f.text_field :faucets %>
+    </div>
+    <div class="">
+      <%= f.label :toilets %>
+      <%= f.text_field :toilets %>
+    </div>
+    <div class="">
+      <%= f.label :doors_windows %>
+      <%= f.text_field :doors_windows %>
+    </div>
+    <div class="">
+      <%= f.label :ceilings_walls %>
+      <%= f.text_field :ceilings_walls %>
+    </div>
+    <div class="">
+      <%= f.label :screen_doors %>
+      <%= f.text_field :screen_doors %>
+    </div>
+    <div class="">
+      <%= f.label :pool %>
+      <%= f.text_field :pool %>
+    </div>
+    <div class="">
+      <%= f.label :exterior %>
+      <%= f.text_field :exterior %>
+    </div>
+    <div class="">
+      <%= f.label :pests %>
+      <%= f.text_field :pests %>
+    </div>
+    <div class="">
+      <%= f.label :general_cleanliness %>
+      <%= f.text_field :general_cleanliness %>
+    </div>
+    <div class="">
+      <%= f.label :carpet_cleanliness %>
+      <%= f.text_field :carpet_cleanliness %>
+    </div>
+    <div class="">
+      <%= f.label :window_cleanliness %>
+      <%= f.text_field :window_cleanliness %>
+    </div>
+    <div class="">
+      <%= f.label :patio_cleanliness%>
+      <%= f.text_field :patio_cleanliness %>
+    </div>
+    <%= f.hidden_field :client_id, :value => @client.id %>
+    <div class="">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>
+
+
