@@ -6,7 +6,8 @@ class InspectionsController < ApplicationController
   end
 
   def index
-    @inspections = Inspection.all
+    @client = Client.find(params[:client_id])
+    @inspections = @client.inspections
   end
 
   def new
