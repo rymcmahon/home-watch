@@ -19,6 +19,7 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save
+      ClientMailer.welcome_email(@client).deliver_now
       redirect_to @client, notice: "New Client Created!"
     else
       render 'new'
