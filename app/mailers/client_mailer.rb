@@ -3,6 +3,6 @@ class ClientMailer < ApplicationMailer
 
   def welcome_email(client)
     @client = client
-    mail(to: @client.email_one, subject: 'Welcome to McMahon Home Watch', reply_to: 'magsups2002@yahoo.com')
+    mail(to: @client.email_one, subject: "Welcome to John's Home Watch", reply_to: 'magsups2002@yahoo.com')
   end
 end
