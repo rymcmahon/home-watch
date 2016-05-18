@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello <%= @client.first_name %>,</h1>
+    <h2>Here is your home inspection report for <%= @inspection.created_at.strftime("%B %d, %Y") %></h2>
+    <div class="">
+      <div class="">
+        <%= @inspection.mail %>
+      </div>
+      <div class="">
+        <%= @inspection.front_door %>
+      </div>
+      <div class="">
+        <%= @inspectionsecurity_system %>
+      </div>
+      <div class="">
+        <%= @inspection.water_main %>
+      </div>
+      <div class="">
+        <%= @inspection.water_heater %>
+      </div>
+      <div class="">
+        <%= @inspection.garage_access_door %>
+      </div>
+      <div class="">
+        <%= @inspection.garage_overhead_door %>
+      </div>
+      <div class="">
+        <%= @inspection.outdoor_trash %>
+      </div>
+      <div class="">
+        <%= @inspection.indoor_trash %>
+      </div>
+      <div class="">
+        <%= @inspection.breaker_box %>
+      </div>
+      <div class="">
+        <%= @inspection.smoke_detectors %>
+      </div>
+      <div class="">
+        <%= @inspection.ceiling_fans %>
+      </div>
+      <div class="">
+        <%= @inspection.humidistat %>
+      </div>
+      <div class="">
+        <%= @inspection.thermostat %>
+      </div>
+      <div class="">
+        <%= @inspection.cabinets_drawers %>
+      </div>
+      <div class="">
+        <%= @inspection.refrigerator %>
+      </div>
+      <div class="">
+        <%= @inspection.freezer %>
+      </div>
+      <div class="">
+        <%= @inspection.garbage_disposal %>
+      </div>
+      <div class="">
+        <%= @inspection.dishwasher %>
+      </div>
+      <div class="">
+        <%= @inspection.faucets %>
+      </div>
+      <div class="">
+        <%= @inspection.toilets %>
+      </div>
+      <div class="">
+        <%= @inspection.doors_windows %>
+      </div>
+      <div class="">
+        <%= @inspection.ceilings_walls %>
+      </div>
+      <div class="">
+        <%= @inspection.screen_doors %>
+      </div>
+      <div class="">
+        <%= @inspection.pool %>
+      </div>
+      <div class="">
+        <%= @inspection.exterior %>
+      </div>
+      <div class="">
+        <%= @inspection.pests %>
+      </div>
+      <div class="">
+        <%= @inspection.general_cleanliness %>
+      </div>
+      <div class="">
+        <%= @inspection.carpet_cleanliness %>
+      </div>
+      <div class="">
+        <%= @inspection.window_cleanliness %>
+      </div>
+      <div class="">
+        <%= @inspection.patio_cleanliness %>
+      </div>
+    <p>Thanks for your business!</p>
+  </body>
+</html>
