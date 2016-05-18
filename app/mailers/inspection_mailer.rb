@@ -1,0 +1,2 @@
+class InspectionMailer < ApplicationMailer
+end
