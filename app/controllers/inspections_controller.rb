@@ -1,4 +1,5 @@
 class InspectionsController < ApplicationController
+  before_action :authenticate_user!
 
   def show
     @inspection = Inspection.find(params[:id])
