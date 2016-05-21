@@ -17,6 +17,44 @@
  @import "bootswatch/cosmo/bootswatch";
  @import "font-awesome";
 
- .container-fluid {
-   padding: 0;
- }
+/**** Global Styles ****/
+.container-fluid {
+ padding: 0;
+}
+
+.btn.btn-default, a.btn.btn-warning.btn-sm {
+ text-transform: uppercase;
+ font-weight: 600;
+}
+
+.form-horizontal label {
+  text-transform: uppercase;
+}
+/**** Phone Styles ****/
+ @media (max-width: 415px) {
+   a.btn.btn-default.btn-lg {
+    width: 100%;
+    font-size: 21px;
+  }
+
+  .sign-in-fields {
+    margin: 10px auto !important;
+    width: 90%;
+  }
+
+  .navbar-brand {
+    padding: 11.5px 15px 14.5px 30px;
+  }
+
+  #brand-header {
+    display: inline;
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 5px;
+  }
+
+  .fa-user-secret {
+    font-size: 30px;
+  }
+}
+
