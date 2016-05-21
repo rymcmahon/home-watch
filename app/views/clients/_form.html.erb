@@ -1,37 +1,46 @@
-<%= form_for :client, url: clients_path do |f| %>
-  <div class="">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="">
-    <%= f.label :street_address %>
-    <%= f.text_field :street_address %>
-  </div>
-  <div class="">
-    <%= f.label :unit %>
-    <%= f.text_field :unit %>
-  </div>
-  <div class="">
-    <%= f.label :phone_one %>
-    <%= f.text_field :phone_one %>
-  </div>
-  <div class="">
-    <%= f.label :phone_two %>
-    <%= f.text_field :phone_two %>
-  </div>
-  <div class="">
-    <%= f.label :email_one %>
-    <%= f.text_field :email_one %>
-  </div>
-  <div class="">
-    <%= f.label :email_two %>
-    <%= f.text_field :email_two %>
-  </div>
-  <div class="">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="container">  
+  <%= form_for :client, url: clients_path do |f| %>
+    <div class="form-group">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :street_address %>
+      <%= f.text_field :street_address, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :unit %>
+      <%= f.text_field :unit, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone_one %>
+      <%= f.text_field :phone_one, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone_two %>
+      <%= f.text_field :phone_two, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email_one %>
+      <%= f.text_field :email_one, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email_two %>
+      <%= f.text_field :email_two, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Creat Client", class:"btn btn-success" %>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+

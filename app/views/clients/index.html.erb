@@ -1,5 +1,19 @@
-<% @clients.each do |client| %>
-<div class="">
-  <h2><%= "#{client.first_name} #{client.last_name}" %></h2>
+<div class="container">
+<%= link_to "Add Client", new_client_path, class:"btn btn-success" %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Client #</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @clients.each do |client| %>
+        <tr>
+          <td> <%= client.id %> </td>
+          <td> <%= link_to "#{client.first_name} #{client.last_name}", client_path(client) %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
-<% end %>

@@ -22,7 +22,7 @@
  padding: 0;
 }
 
-.btn.btn-default, a.btn.btn-warning.btn-sm {
+.btn  {
  text-transform: uppercase;
  font-weight: 600;
 }
@@ -35,6 +35,28 @@
    a.btn.btn-default.btn-lg {
     width: 100%;
     font-size: 21px;
+  }
+
+  .btn.btn-success {
+    width: 100%;
+    font-size: 21px;
+  }
+
+  .table.table-striped {
+    margin-top: 20px;
+  }
+
+  .table.table-striped th {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .table.table-striped td {
+    font-size: 20px;
+  }
+
+  .table.table-striped a {
+    text-decoration: none;
   }
 
   .sign-in-fields {
@@ -55,6 +77,11 @@
 
   .fa-user-secret {
     font-size: 30px;
+  }
+
+  li a {
+    font-weight: 700;
+    margin-left: 10px;
   }
 }
 
