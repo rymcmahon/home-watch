@@ -9,7 +9,7 @@
     <tbody>
       <% @inspections.each do |inspection| %>
         <tr>
-          <td><%= link_to inspection.created_at.strftime("%B %d, %Y"), client_inspection_path(@client, inspection.id) %></td>
+          <td><%= link_to inspection.created_at.strftime("%B %d, %Y"), client_inspection_path(@client, inspection) %></td>
         </tr>
       <% end %>
     </tbody>
