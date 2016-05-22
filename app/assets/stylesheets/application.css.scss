@@ -30,6 +30,23 @@
 .form-horizontal label {
   text-transform: uppercase;
 }
+
+.form-label {
+  text-transform: uppercase;
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+.inspection-date {
+  color: #707070;
+  font-weight: 600;
+}
+
+.alert h4 {
+  font-weight: 700;
+}
 /**** Phone Styles ****/
  @media (max-width: 415px) {
    a.btn.btn-default.btn-lg {
@@ -82,6 +99,22 @@
   li a {
     font-weight: 700;
     margin-left: 10px;
+  }
+
+  .inspection-btn {
+    font-size: 18px !important;
+    line-height: 20px !important;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .create-inspection-btn {
+    width: 100%;
+    font-size: 21px;
+  }
+
+  .inspection-show h4{
+    margin-top: 0;
   }
 }
 

@@ -1,3 +1,17 @@
-<% @inspections.each do |inspection| %>
-  <h2><%= inspection.created_at.strftime("%B %d, %Y") %></h2>
-<% end %>
+<div class="container">
+  <legend><strong><%= "#{@client.first_name} #{@client.last_name}'s Inspections" %></strong></legend>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date of Inspection</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @inspections.each do |inspection| %>
+        <tr>
+          <td><%= link_to inspection.created_at.strftime("%B %d, %Y"), client_inspection_path(@client, inspection.id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
