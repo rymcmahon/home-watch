@@ -76,4 +76,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = { host: "radiant-wave-69795.herokuapp.com" }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "radiant-wave-69795.herokuapp.com",
+    :user_name => ENV["mailgun_username"],
+    :password => ENV["mailgun_password"]
+  }
 end
