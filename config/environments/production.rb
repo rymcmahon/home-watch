@@ -84,7 +84,7 @@ Rails.application.configure do
     :authentication => :plain,
     :address => "smtp.mailgun.org",
     :port => 587,
-    :domain => "radiant-wave-69795.herokuapp.com",
+    :domain => "mg.johnshomewatch.com",
     :user_name => ENV["mailgun_username"],
     :password => ENV["mailgun_password"]
   }
