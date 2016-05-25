@@ -1,5 +1,5 @@
 class ClientMailer < ApplicationMailer
-  default from: "sandbox62112cf2ad9b47318b9a58c8c301d2c9.mailgun.org"
+  default from: "johnshomewatch.com"
 
   def welcome_email(client)
     @client = client
