@@ -28,7 +28,7 @@ class InspectionsController < ApplicationController
       ClientMailer.inspection_email(@client, @inspection).deliver_now
       redirect_to client_inspection_path(@client, @inspection), notice: "New Inspection Saved!"
     else
-      render new_client_inspection_path
+      render 'new'
     end
   end
 

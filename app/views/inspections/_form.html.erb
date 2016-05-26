@@ -1,133 +1,145 @@
 <div class="container">
   <%= form_for [@client, @inspection] do |f| %>
-      <div class="form-group">
-        <%= f.label :mail, class:"form-label" %>
-        <%= f.text_field :mail, class:"form-control" %>
+    <% if @inspection.errors.any? %>
+      <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <h4 class="alert-validation">
+          <%= pluralize(@inspection.errors.count, "error") %> prohibited
+          this inspection from being saved:
+        </h4>
+          <% @inspection.errors.full_messages.each do |msg| %>
+            <p><%= msg %></p>
+          <% end %>
       </div>
-      <div class="form-group">
-        <%= f.label :front_door, class:"form-label" %>
-        <%= f.text_field :front_door, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :security_system, class:"form-label" %>
-        <%= f.text_field :security_system, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :water_main, class:"form-label" %>
-        <%= f.text_field :water_main, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :water_heater, class:"form-label" %>
-        <%= f.text_field :water_heater, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :garage_access_door, class:"form-label" %>
-        <%= f.text_field :garage_access_door, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :garage_overhead_door, class:"form-label" %>
-        <%= f.text_field :garage_overhead_door, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :outdoor_trash, class:"form-label" %>
-        <%= f.text_field :outdoor_trash, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :indoor_trash, class:"form-label" %>
-        <%= f.text_field :indoor_trash, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :breaker_box, class:"form-label" %>
-        <%= f.text_field :breaker_box, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :smoke_detectors, class:"form-label" %>
-        <%= f.text_field :smoke_detectors, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :ceiling_fans, class:"form-label" %>
-        <%= f.text_field :ceiling_fans, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :humidistat, class:"form-label" %>
-        <%= f.text_field :humidistat, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :thermostat, class:"form-label" %>
-        <%= f.text_field :thermostat, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :cabinets_drawers, class:"form-label" %>
-        <%= f.text_field :cabinets_drawers, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :refrigerator, class:"form-label" %>
-        <%= f.text_field :refrigerator, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :freezer, class:"form-label" %>
-        <%= f.text_field :freezer, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :garbage_disposal, class:"form-label" %>
-        <%= f.text_field :garbage_disposal, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :dishwasher, class:"form-label" %>
-        <%= f.text_field :dishwasher, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :faucets, class:"form-label" %>
-        <%= f.text_field :faucets, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :toilets, class:"form-label" %>
-        <%= f.text_field :toilets, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :doors_windows, class:"form-label" %>
-        <%= f.text_field :doors_windows, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :ceilings_walls, class:"form-label" %>
-        <%= f.text_field :ceilings_walls, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :screen_doors, class:"form-label" %>
-        <%= f.text_field :screen_doors, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :pool, class:"form-label" %>
-        <%= f.text_field :pool, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :exterior, class:"form-label" %>
-        <%= f.text_field :exterior, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :pests, class:"form-label" %>
-        <%= f.text_field :pests, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :general_cleanliness, class:"form-label" %>
-        <%= f.text_field :general_cleanliness, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :carpet_cleanliness, class:"form-label" %>
-        <%= f.text_field :carpet_cleanliness, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :window_cleanliness, class:"form-label" %>
-        <%= f.text_field :window_cleanliness, class:"form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :patio_cleanliness, class:"form-label" %>
-        <%= f.text_field :patio_cleanliness, class:"form-control" %>
-      </div>
-      <%= f.hidden_field :client_id, :value => @client.id %>
-      <div class="form-group">
-        <%= f.submit class: "btn btn-danger create-inspection-btn" %>
-      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.label :mail, class:"form-label" %>
+      <%= f.text_field :mail, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :front_door, class:"form-label" %>
+      <%= f.text_field :front_door, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :security_system, class:"form-label" %>
+      <%= f.text_field :security_system, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :water_main, class:"form-label" %>
+      <%= f.text_field :water_main, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :water_heater, class:"form-label" %>
+      <%= f.text_field :water_heater, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :garage_access_door, class:"form-label" %>
+      <%= f.text_field :garage_access_door, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :garage_overhead_door, class:"form-label" %>
+      <%= f.text_field :garage_overhead_door, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :outdoor_trash, class:"form-label" %>
+      <%= f.text_field :outdoor_trash, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :indoor_trash, class:"form-label" %>
+      <%= f.text_field :indoor_trash, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :breaker_box, class:"form-label" %>
+      <%= f.text_field :breaker_box, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :smoke_detectors, class:"form-label" %>
+      <%= f.text_field :smoke_detectors, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :ceiling_fans, class:"form-label" %>
+      <%= f.text_field :ceiling_fans, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :humidistat, class:"form-label" %>
+      <%= f.text_field :humidistat, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :thermostat, class:"form-label" %>
+      <%= f.text_field :thermostat, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :cabinets_drawers, class:"form-label" %>
+      <%= f.text_field :cabinets_drawers, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :refrigerator, class:"form-label" %>
+      <%= f.text_field :refrigerator, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :freezer, class:"form-label" %>
+      <%= f.text_field :freezer, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :garbage_disposal, class:"form-label" %>
+      <%= f.text_field :garbage_disposal, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :dishwasher, class:"form-label" %>
+      <%= f.text_field :dishwasher, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :faucets, class:"form-label" %>
+      <%= f.text_field :faucets, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :toilets, class:"form-label" %>
+      <%= f.text_field :toilets, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :doors_windows, class:"form-label" %>
+      <%= f.text_field :doors_windows, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :ceilings_walls, class:"form-label" %>
+      <%= f.text_field :ceilings_walls, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :screen_doors, class:"form-label" %>
+      <%= f.text_field :screen_doors, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :pool, class:"form-label" %>
+      <%= f.text_field :pool, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :exterior, class:"form-label" %>
+      <%= f.text_field :exterior, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :pests, class:"form-label" %>
+      <%= f.text_field :pests, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :general_cleanliness, class:"form-label" %>
+      <%= f.text_field :general_cleanliness, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :carpet_cleanliness, class:"form-label" %>
+      <%= f.text_field :carpet_cleanliness, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :window_cleanliness, class:"form-label" %>
+      <%= f.text_field :window_cleanliness, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :patio_cleanliness, class:"form-label" %>
+      <%= f.text_field :patio_cleanliness, class:"form-control" %>
+    </div>
+    <%= f.hidden_field :client_id, :value => @client.id %>
+    <div class="form-group">
+      <%= f.submit class: "btn btn-danger create-inspection-btn" %>
+    </div>
   <% end %>
 </div>
 

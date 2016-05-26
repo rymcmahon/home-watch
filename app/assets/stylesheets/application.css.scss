@@ -44,6 +44,15 @@
   font-weight: 600;
 }
 
+.alert-validation {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.alert p {
+  font-weight: 700;
+}
+
 .alert h4 {
   font-weight: 700;
 }
@@ -55,6 +64,11 @@
   }
 
   .btn.btn-success {
+    width: 100%;
+    font-size: 21px;
+  }
+
+  .btn.btn-danger {
     width: 100%;
     font-size: 21px;
   }
