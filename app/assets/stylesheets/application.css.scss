@@ -31,10 +31,6 @@
   text-transform: uppercase;
 }
 
-.form-label {
-  text-transform: uppercase;
-}
-
 .btn {
   border-radius: 5px;
 }
@@ -56,83 +52,96 @@
 .alert h4 {
   font-weight: 700;
 }
+
+.table.table-striped {
+  margin-top: 20px;
+}
+
+.table.table-striped th {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.table.table-striped td {
+  font-size: 20px;
+}
+
+.table.table-striped a {
+  text-decoration: none;
+}
+
+.sign-in-fields {
+  margin: 10px auto !important;
+  width: 90%;
+}
+
+.navbar-brand {
+  padding: 11.5px 15px 14.5px 30px;
+}
+
+#brand-header {
+  display: inline;
+  font-weight: 700;
+  font-size: 24px;
+  padding-left: 5px;
+}
+
+.fa-user-secret {
+  font-size: 30px;
+}
+
+li a {
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.inspection-btn {
+  font-size: 18px !important;
+  line-height: 20px !important;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.create-inspection-btn {
+  width: 100%;
+  font-size: 21px;
+}
+
+.inspection-show h4{
+  margin-top: 0;
+}
+
+.client-show h4 {
+  margin-top: 0;
+}
+
 /**** Phone Styles ****/
- @media (max-width: 415px) {
-   a.btn.btn-default.btn-lg {
+@media (max-width: 500px) {
+  .btn {
     width: 100%;
     font-size: 21px;
-  }
-
-  .btn.btn-success {
-    width: 100%;
-    font-size: 21px;
-  }
-
-  .btn.btn-danger {
-    width: 100%;
-    font-size: 21px;
-  }
-
-  .table.table-striped {
-    margin-top: 20px;
-  }
-
-  .table.table-striped th {
-    text-transform: uppercase;
-    font-size: 20px;
-  }
-
-  .table.table-striped td {
-    font-size: 20px;
-  }
-
-  .table.table-striped a {
-    text-decoration: none;
-  }
-
-  .sign-in-fields {
-    margin: 10px auto !important;
-    width: 90%;
-  }
-
-  .navbar-brand {
-    padding: 11.5px 15px 14.5px 30px;
-  }
-
-  #brand-header {
-    display: inline;
-    font-weight: 700;
-    font-size: 24px;
-    padding-left: 5px;
-  }
-
-  .fa-user-secret {
-    font-size: 30px;
-  }
-
-  li a {
-    font-weight: 700;
-    margin-left: 10px;
-  }
-
-  .inspection-btn {
-    font-size: 18px !important;
-    line-height: 20px !important;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .create-inspection-btn {
-    width: 100%;
-    font-size: 21px;
-  }
-
-  .inspection-show h4{
-    margin-top: 0;
-  }
-
-  .client-show h4 {
-    margin-top: 0;
   }
 }
 
+/**** Tablet Styles ****/
+@media (min-width: 501px) and (max-width: 768px) {
+  .btn {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+  }
+}
+
+/**** Desktop Styles ****/
+@media (min-width: 769px) {
+  .navbar-nav {
+    float:right;
+  }
+
+  .btn {
+    display: block;
+    width: 25%;
+    margin: 20px auto;
+  }
+
+}

@@ -1,16 +1,11 @@
 <div class="container">
   <div class="client-show">
     <legend><strong><%= "#{@client.first_name} #{@client.last_name}" %></strong></legend>
-    <label class="form-label">Address</label>
-    <h4><%= "#{@client.street_address} ##{@client.unit}" %></h4>
-    <label class="form-label">Primary Phone</label>
-    <h4><%= @client.phone_one %></h4>
-    <label class="form-label">Secondary Phone</label>
-    <h4><%= @client.phone_two %></h4>
-    <label class="form-label">Primary Email</label>
-    <h4><%= @client.email_one %></h4>
-    <label class="form-label">Secondary Email</label>
-    <h4><%= @client.email_two %></h4>
+    <h4><strong>Address:</strong> <%= "#{@client.street_address} ##{@client.unit}" %></h4>
+    <h4><strong>Primary Phone:</strong> <%= @client.phone_one %></h4>
+    <h4><strong>Secondary Phone:</strong> <%= @client.phone_two %></h4>
+    <h4><strong>Primary Email:</strong> <%= @client.email_one %></h4>
+    <h4><strong>Secondary Email:</strong> <%= @client.email_two %></h4>
   </div>
   <%= link_to "Start Inspection For <br /> #{@client.first_name} #{@client.last_name}".html_safe, new_client_inspection_path(@client), class:"btn btn-success btn-sm inspection-btn"%>
   <%= link_to "View #{@client.first_name} #{@client.last_name}'s <br /> Inspections".html_safe, client_inspections_path(@client), class:"btn btn-warning btn-sm inspection-btn"%>
