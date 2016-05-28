@@ -4,11 +4,27 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to John's Home Watch, <%= @client.first_name %></h1>
-    <p>
-      After each inspection you will receive an email detailing the results of the inspection.
-      Just reply to this email if you have any questions.
-    </p>
-    <p>Thanks for your business!</p>
+    <table style="max-width:600px;font-family:Arial;margin:0 auto;border-collapse:collapse;" cellpadding="20">
+      <thead>
+        <tr>
+          <th style="background-color:#2780E3;color:#fff;height:50px;font-size:20px;">John’s Home Watch</th>
+        </tr>
+      </thead>
+      <tbody style="background-color:#F9F9F9;">
+        <tr>
+          <td>Welcome to John's Home Watch, <%= @client.first_name %>.</td>
+        </tr>
+        <tr>
+          <td style="line-height:23px;">After each inspection you will receive an email detailing the results of the inspection.
+          Just reply to this email if you have any questions, or email me directly at <a href="mailto:magsups2002@yahoo.com" style="color:#3FB618;">magsups2002@yahoo.com</a>.</td>
+        </tr>
+        <tr>
+          <td>Thanks for your business!</td>
+        </tr>
+        <tr>
+          <td>John McMahon</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>

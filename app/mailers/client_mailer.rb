@@ -1,5 +1,5 @@
 class ClientMailer < ApplicationMailer
-  default from: "johnshomewatch.com"
+  default from: "john@johnshomewatch.com"
 
   def welcome_email(client)
     @client = client
