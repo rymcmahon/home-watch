@@ -6,6 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag 'favicon.png', rel: 'apple-touch-icon', type: 'image/png' %>
 </head>
 <body>
   <div class="container-fluid">
@@ -18,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/pages/home"><i class="fa fa-user-secret" aria-hidden="true"></i><p id="brand-header">John's Home Watch</p></a>
+          <a class="navbar-brand" href="/pages/home"><i class="fa fa-user-secret" aria-hidden="true"></i><p id="brand-header">John’s Home Watch</p></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

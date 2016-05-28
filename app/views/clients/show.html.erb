@@ -8,6 +8,6 @@
     <h4><strong>Secondary Email:</strong> <%= @client.email_two %></h4>
   </div>
   <%= link_to "Start Inspection For <br /> #{@client.first_name} #{@client.last_name}".html_safe, new_client_inspection_path(@client), class:"btn btn-success btn-sm inspection-btn"%>
-  <%= link_to "View #{@client.first_name} #{@client.last_name}'s <br /> Inspections".html_safe, client_inspections_path(@client), class:"btn btn-warning btn-sm inspection-btn"%>
-  <%= link_to 'Edit Client', edit_client_path(@client), class: "btn btn-info btn-sm inspection-btn" %>
+  <%= link_to "View #{@client.first_name} #{@client.last_name}’s <br /> Inspections".html_safe, client_inspections_path(@client), class:"btn btn-warning btn-sm inspection-btn"%>
+  <%= link_to "Edit #{@client.first_name} #{@client.last_name}’s <br /> Information".html_safe, edit_client_path(@client), class: "btn btn-default btn-sm inspection-btn button-height" %>
 </div>

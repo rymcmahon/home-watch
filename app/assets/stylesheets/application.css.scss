@@ -96,7 +96,7 @@ li a {
 }
 
 .inspection-btn {
-  font-size: 18px !important;
+  font-size: 16px !important;
   line-height: 20px !important;
   margin-top: 10px;
   width: 100%;
@@ -139,9 +139,8 @@ li a {
   }
 
   .btn {
-    display: block;
     width: 25%;
-    margin: 20px auto;
+    float: left;
+    margin: 20px 5px;
   }
-
 }
