@@ -4,102 +4,114 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hello <%= @client.first_name %>,</h1>
-    <h2>Here is your home inspection report for <%= @inspection.created_at.strftime("%B %d, %Y") %></h2>
-    <div class="">
-      <div class="">
-        <%= @inspection.mail %>
-      </div>
-      <div class="">
-        <%= @inspection.front_door %>
-      </div>
-      <div class="">
-        <%= @inspection.security_system %>
-      </div>
-      <div class="">
-        <%= @inspection.water_main %>
-      </div>
-      <div class="">
-        <%= @inspection.water_heater %>
-      </div>
-      <div class="">
-        <%= @inspection.garage_access_door %>
-      </div>
-      <div class="">
-        <%= @inspection.garage_overhead_door %>
-      </div>
-      <div class="">
-        <%= @inspection.outdoor_trash %>
-      </div>
-      <div class="">
-        <%= @inspection.indoor_trash %>
-      </div>
-      <div class="">
-        <%= @inspection.breaker_box %>
-      </div>
-      <div class="">
-        <%= @inspection.smoke_detectors %>
-      </div>
-      <div class="">
-        <%= @inspection.ceiling_fans %>
-      </div>
-      <div class="">
-        <%= @inspection.humidistat %>
-      </div>
-      <div class="">
-        <%= @inspection.thermostat %>
-      </div>
-      <div class="">
-        <%= @inspection.cabinets_drawers %>
-      </div>
-      <div class="">
-        <%= @inspection.refrigerator %>
-      </div>
-      <div class="">
-        <%= @inspection.freezer %>
-      </div>
-      <div class="">
-        <%= @inspection.garbage_disposal %>
-      </div>
-      <div class="">
-        <%= @inspection.dishwasher %>
-      </div>
-      <div class="">
-        <%= @inspection.faucets %>
-      </div>
-      <div class="">
-        <%= @inspection.toilets %>
-      </div>
-      <div class="">
-        <%= @inspection.doors_windows %>
-      </div>
-      <div class="">
-        <%= @inspection.ceilings_walls %>
-      </div>
-      <div class="">
-        <%= @inspection.screen_doors %>
-      </div>
-      <div class="">
-        <%= @inspection.pool %>
-      </div>
-      <div class="">
-        <%= @inspection.exterior %>
-      </div>
-      <div class="">
-        <%= @inspection.pests %>
-      </div>
-      <div class="">
-        <%= @inspection.general_cleanliness %>
-      </div>
-      <div class="">
-        <%= @inspection.carpet_cleanliness %>
-      </div>
-      <div class="">
-        <%= @inspection.window_cleanliness %>
-      </div>
-      <div class="">
-        <%= @inspection.patio_cleanliness %>
-      </div>
-    <p>Thanks for your business!</p>
+    <table style="max-width:600px;font-family:Arial;margin:0 auto;border-collapse:collapse;" cellpadding="10">
+      <thead>
+        <tr>
+          <th style="background-color:#2780E3;color:#fff;height:50px;font-size:20px;">John’s Home Watch</th>
+        </tr>
+      </thead>
+      <tbody style="background-color:#F9F9F9;">
+        <tr>
+          <td><h3><%= @client.first_name %>, here is the inspection report for <%= @inspection.created_at.strftime("%B %d, %Y") %>.</h3></td>
+        </tr>
+        <tr>
+          <td><strong>Mail:</strong> <%= @inspection.mail %></td>
+        </tr>
+        <tr>
+          <td><strong>Front Door:</strong> <%= @inspection.front_door %></td>
+        </tr>
+        <tr>
+          <td><strong>Security System:</strong> <%= @inspection.security_system %></td>
+        </tr>
+        <tr>
+          <td><strong>Water Main:</strong> <%= @inspection.water_main %></td>
+        </tr>
+        <tr>
+          <td><strong>Water Heater:</strong> <%= @inspection.water_heater %></td>
+        </tr>
+        <tr>
+          <td><strong>Garage Access Door:</strong> <%= @inspection.garage_access_door %></td>
+        </tr>
+        <tr>
+          <td><strong>Garage Overhead Door:</strong> <%= @inspection.garage_overhead_door %></td>
+        </tr>
+        <tr>
+          <td><strong>Outdoor Trash:</strong> <%= @inspection.outdoor_trash %></td>
+        </tr>
+        <tr>
+          <td><strong>Indoor Trash:</strong> <%= @inspection.indoor_trash %></td>
+        </tr>
+        <tr>
+          <td><strong>Breaker Box:</strong> <%= @inspection.breaker_box %></td>
+        </tr>
+        <tr>
+          <td><strong>Smoke Detectors:</strong> <%= @inspection.smoke_detectors %></td>
+        </tr>
+        <tr>
+          <td><strong>Ceiling Fans:</strong> <%= @inspection.ceiling_fans %></td>
+        </tr>
+        <tr>
+          <td><strong>Humidistat:</strong> <%= @inspection.humidistat %></td>
+        </tr>
+        <tr>
+          <td><strong>Thermostat:</strong> <%= @inspection.thermostat %></td>
+        </tr>
+        <tr>
+          <td><strong>Cabinets & Drawers:</strong> <%= @inspection.cabinets_drawers %></td>
+        </tr>
+        <tr>
+          <td><strong>Refrigerator:</strong> <%= @inspection.refrigerator %></td>
+        </tr>
+        <tr>
+          <td><strong>Freezer:</strong> <%= @inspection.freezer %></td>
+        </tr>
+        <tr>
+          <td><strong>Garbage Disposal:</strong> <%= @inspection.garbage_disposal %></td>
+        </tr>
+        <tr>
+          <td><strong>Dishwasher:</strong> <%= @inspection.dishwasher %></td>
+        </tr>
+        <tr>
+          <td><strong>Faucets:</strong> <%= @inspection.faucets %></td>
+        </tr>
+        <tr>
+          <td><strong>Toilets:</strong> <%= @inspection.toilets %></td>
+        </tr>
+        <tr>
+          <td><strong>Doors & Windows:</strong> <%= @inspection.doors_windows %></td>
+        </tr>
+        <tr>
+          <td><strong>Ceilings & Walls:</strong> <%= @inspection.ceilings_walls %></td>
+        </tr>
+        <tr>
+          <td><strong>Screen Doors:</strong> <%= @inspection.screen_doors %></td>
+        </tr>
+        <tr>
+          <td><strong>Pool:</strong> <%= @inspection.pool %></td>
+        </tr>
+        <tr>
+          <td><strong>Exterior:</strong> <%= @inspection.exterior %></td>
+        </tr>
+        <tr>
+          <td><strong>Pests:</strong> <%= @inspection.pests %></td>
+        </tr>
+        <tr>
+          <td><strong>General Cleanliness:</strong> <%= @inspection.general_cleanliness %></td>
+        </tr>
+        <tr>
+          <td><strong>Carpet Cleanliness:</strong> <%= @inspection.carpet_cleanliness %></td>
+        </tr>
+        <tr>
+          <td><strong>Window Cleanliness:</strong> <%= @inspection.window_cleanliness %></td>
+        </tr>
+        <tr>
+          <td><strong>Patio Cleanliness:</strong> <%= @inspection.patio_cleanliness %></td>
+        </tr>
+        <tr>
+          <td>Thanks,<br />
+          John</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
