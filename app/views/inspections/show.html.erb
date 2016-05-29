@@ -65,4 +65,5 @@
     <label class="form-label">Patio Cleanliness</label>
     <h4><%= @inspection.patio_cleanliness %></h4>
   </div>
+  <%= link_to "Edit Inspection", edit_client_inspection_path(:client_id => @client, :id => @inspection), class: "btn btn-default btn-sm inspection-btn button-height" %>
 </div>
