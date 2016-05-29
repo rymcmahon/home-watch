@@ -115,6 +115,24 @@ li a {
   margin-top: 0;
 }
 
+.reset-email-btn {
+  font-size: 16px !important;
+}
+
+#error_explanation {
+  background-color: #FF0039;
+  color: #fff;
+}
+
+#error_explanation h2 {
+  font-weight: 700;
+  padding-left: 5px;
+}
+
+#error_explanation ul {
+  font-size: 18px;
+  padding-left: 30px;
+}
 /**** Phone Styles ****/
 @media (max-width: 500px) {
   .btn {
