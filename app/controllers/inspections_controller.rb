@@ -53,7 +53,7 @@ class InspectionsController < ApplicationController
       :breaker_box, :washer, :dryer, :smoke_detectors, :ceiling_fans, :humidistat,
       :thermostat, :cabinets_drawers, :refrigerator, :freezer, :garbage_disposal, :dishwasher,
       :faucets, :toilets, :doors_windows, :ceilings_walls, :screen_doors, :pool, :exterior,
-      :pests, :general_cleanliness, :carpet_cleanliness, :window_cleanliness, :patio_cleanliness, :client_id)
+      :pests, :general_cleanliness, :carpet_cleanliness, :window_cleanliness, :patio_cleanliness, :comments, :client_id)
     end
 
 end
