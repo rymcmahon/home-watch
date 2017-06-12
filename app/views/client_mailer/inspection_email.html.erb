@@ -107,7 +107,7 @@
         <tr>
           <td><strong>Patio Cleanliness:</strong> <%= @inspection.patio_cleanliness %></td>
         </tr>
-        <% if @inspection.comments == true %>
+        <% if @inspection.comments.present? %>
           <tr>
             <td><strong>Comments:</strong> <%= @inspection.comments %></td>
           </tr>
